@@ -46,7 +46,7 @@ Delivery: 3-5 days.
 
 ## Samples
 
-- Landing page: http://82.156.211.166/
+- HTTPS landing page: https://burypossibility.github.io/china-market-micro-launch-pack/
 - Portfolio PDF: http://82.156.211.166/assets/service_portfolio.pdf
 - Ecommerce AI sample: http://82.156.211.166/assets/storeclaw_mini_localization_audit.pdf
 - Marketing email sample: http://82.156.211.166/assets/brew_mini_localization_audit.pdf
