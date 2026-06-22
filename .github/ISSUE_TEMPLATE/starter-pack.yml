@@ -1,0 +1,61 @@
+name: China Market Starter Pack
+description: Request a paid China-market localization starter pack.
+title: "[Starter request] "
+labels:
+  - lead
+  - starter-pack
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest. Please share enough context to quote and start a small paid localization pack.
+  - type: input
+    id: product_url
+    attributes:
+      label: Product URL
+      description: Landing page, Shopify/Amazon listing, app page, GitHub repo, or SaaS page.
+      placeholder: "https://example.com"
+    validations:
+      required: true
+  - type: textarea
+    id: target_customer
+    attributes:
+      label: Target customer
+      description: Who buys or uses this product?
+      placeholder: "Example: indie founders, Shopify store owners, busy parents, B2B SaaS teams..."
+    validations:
+      required: true
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package
+      options:
+        - Starter - USD 29
+        - Standard - USD 79
+        - Sprint - USD 149
+    validations:
+      required: true
+  - type: dropdown
+    id: tone
+    attributes:
+      label: Preferred tone
+      options:
+        - Practical
+        - Premium
+        - Playful
+        - Technical
+        - Founder-led
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Claims or constraints
+      description: Any claims that must not be changed, legal restrictions, or words to avoid.
+      placeholder: "No medical claims. Keep brand name unchanged. Avoid discounts."
+  - type: input
+    id: deadline
+    attributes:
+      label: Desired deadline
+      placeholder: "Example: 2 days"
