@@ -1,0 +1,61 @@
+name: Server deployment help
+description: Request Linux, Docker, Nginx, HTTPS, or open-source project deployment help.
+title: "[Deploy]: "
+labels: ["deployment-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share enough context to estimate the scope. Do not paste production secrets into this public issue.
+  - type: input
+    id: project_url
+    attributes:
+      label: Project URL or docs
+      description: GitHub repo, Docker image, install docs, or website URL.
+      placeholder: https://github.com/example/project
+    validations:
+      required: true
+  - type: dropdown
+    id: package
+    attributes:
+      label: Requested package
+      options:
+        - Quick diagnosis - USD 9+
+        - Static site deploy - USD 19+
+        - Docker app deploy - USD 39+
+        - Deploy + HTTPS handover - USD 79+
+        - Not sure yet
+    validations:
+      required: true
+  - type: input
+    id: server_os
+    attributes:
+      label: Server OS
+      placeholder: Ubuntu 24.04, Debian 12, etc.
+  - type: input
+    id: domain
+    attributes:
+      label: Domain status
+      placeholder: No domain yet / domain purchased / DNS already points to server
+  - type: textarea
+    id: current_state
+    attributes:
+      label: Current state or error
+      description: Paste non-sensitive logs, screenshots, or what you already tried.
+      placeholder: The container starts but port 3000 is not reachable...
+    validations:
+      required: true
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: Expected result
+      placeholder: I want this reachable at https://example.com with restart commands documented.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: This is not phishing, spam, abuse tooling, illegal scraping, gambling gray-market software, or a platform-control bypass request.
+          required: true
