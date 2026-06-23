@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Linux 服务器部署 / Docker / Nginx / SSL 帮助</title>
+    <meta name="description" content="提供 Linux 服务器、Docker、Nginx、域名解析、HTTPS、开源项目部署和上线排查服务。">
+    <meta property="og:title" content="Linux 服务器部署与上线排查">
+    <meta property="og:description" content="小项目快速部署、Docker/Nginx/SSL 排查、静态网站上线、开源工具部署。">
+    <meta property="og:image" content="assets/hero-localization-workspace.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .deploy-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+        gap: clamp(28px, 5vw, 72px);
+        align-items: center;
+        min-height: calc(100svh - 64px);
+        padding: clamp(36px, 6vw, 86px) clamp(20px, 5vw, 72px) clamp(28px, 5vw, 60px);
+      }
+
+      .deploy-poster img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+
+      .deploy-page h1 {
+        max-width: 8ch;
+      }
+
+      .deploy-proof strong {
+        color: var(--jade-dark);
+      }
+
+      .strong-list {
+        font-size: 1.08rem;
+      }
+
+      .note-panel {
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+      }
+
+      .note-panel p {
+        margin: 12px 0 0;
+        color: var(--muted);
+      }
+
+      @media (max-width: 980px) {
+        .deploy-hero {
+          grid-template-columns: 1fr;
+          min-height: auto;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .deploy-hero {
+          padding-top: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body class="deploy-page">
+    <header class="site-header">
+      <a class="brand" href="deploy.html">服务器部署服务</a>
+      <nav aria-label="主要导航">
+        <a href="#price">价格</a>
+        <a href="#scope">范围</a>
+        <a href="#request">下单咨询</a>
+        <a href="index.html">English</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="deploy-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Linux / Docker / Nginx / SSL</p>
+          <h1>服务器部署与上线排查</h1>
+          <p class="lead">
+            帮你把 GitHub 项目、Docker 应用、静态网站、开源工具部署成可访问链接。适合已经买了云服务器，但卡在端口、反代、域名、证书、容器报错的人。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/BuryPossibility/china-market-micro-launch-pack/issues/new/choose">发起需求</a>
+            <a class="button secondary" href="mailto:2521778500@qq.com?subject=服务器部署咨询">邮件咨询</a>
+          </div>
+        </div>
+        <figure class="hero-visual deploy-poster">
+          <img src="assets/hero-localization-workspace.jpg" alt="服务器部署、上线排查和交付规划工作台">
+        </figure>
+      </section>
+
+      <section class="proof-band deploy-proof" aria-label="服务要点">
+        <div>
+          <strong>39 元起</strong>
+          <span>快速诊断一次</span>
+        </div>
+        <div>
+          <strong>当天可做</strong>
+          <span>先看项目复杂度</span>
+        </div>
+        <div>
+          <strong>可走担保</strong>
+          <span>闲鱼 / 微信 / 支付宝 / PayPal</span>
+        </div>
+        <div>
+          <strong>只接正规项目</strong>
+          <span>拒绝灰产和绕风控</span>
+        </div>
+      </section>
+
+      <section class="section" id="price">
+        <div class="section-heading">
+          <p class="eyebrow">Price</p>
+          <h2>先判断问题，再确认价格</h2>
+        </div>
+        <div class="package-grid">
+          <article class="package-card">
+            <div class="package-top">
+              <h3>快速诊断</h3>
+              <p class="price">39 元</p>
+            </div>
+            <p>看报错、日志、端口、域名、服务状态，告诉你问题在哪里和下一步怎么修。</p>
+            <ul>
+              <li>适合 Docker 跑不起来</li>
+              <li>适合外网访问不了</li>
+              <li>适合 Nginx/SSL 配置疑难</li>
+            </ul>
+            <p class="delivery">通常 30-60 分钟内给结论</p>
+          </article>
+
+          <article class="package-card featured">
+            <div class="package-top">
+              <h3>单项目部署</h3>
+              <p class="price">99 元起</p>
+            </div>
+            <p>按已有文档或 GitHub 项目，把一个服务部署到你的 Linux 服务器。</p>
+            <ul>
+              <li>Docker / docker compose 项目</li>
+              <li>Node / Python / 静态网站</li>
+              <li>提供访问链接和启动命令</li>
+            </ul>
+            <p class="delivery">简单项目可当天交付</p>
+          </article>
+
+          <article class="package-card">
+            <div class="package-top">
+              <h3>部署 + 域名 HTTPS</h3>
+              <p class="price">199 元起</p>
+            </div>
+            <p>在部署基础上，配置域名解析、Nginx 反代、HTTPS 证书和基础自启动。</p>
+            <ul>
+              <li>域名绑定</li>
+              <li>HTTPS 证书</li>
+              <li>日志、重启、排查命令交接</li>
+            </ul>
+            <p class="delivery">复杂项目先评估再报价</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section deployment" id="scope">
+        <div class="section-heading">
+          <p class="eyebrow">Scope</p>
+          <h2>适合这些场景</h2>
+        </div>
+        <div class="service-split">
+          <div>
+            <ul class="check-list strong-list">
+              <li>买了云服务器，但项目不知道怎么上线</li>
+              <li>GitHub 开源项目按教程安装失败</li>
+              <li>Docker 容器启动了，但外网访问不了</li>
+              <li>Nginx 反代、端口、防火墙、域名解析不会配</li>
+              <li>想部署 n8n、Dify、FastGPT、Uptime Kuma、WordPress、静态网站等工具</li>
+            </ul>
+          </div>
+          <div class="note-panel">
+            <h3>不接这些</h3>
+            <p>博彩、钓鱼、诈骗、盗号、刷量、群发垃圾信息、违法采集、代理池、绕过风控、攻击测试，以及需要长期保管账号密码的项目。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section request" id="request">
+        <div class="request-copy">
+          <p class="eyebrow">Start</p>
+          <h2>发项目链接或报错截图，先判断能不能做</h2>
+          <p>
+            请提供服务器系统、项目地址或安装文档、域名状态、当前报错截图或终端日志。不要在公开 issue 里粘贴服务器密码、Token、API Key。
+          </p>
+        </div>
+        <div class="request-actions">
+          <a class="button primary" href="https://github.com/BuryPossibility/china-market-micro-launch-pack/issues/new/choose">提交需求表单</a>
+          <a class="button secondary" href="mailto:2521778500@qq.com?subject=服务器部署咨询">邮件发送需求</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>正规部署、排查、上线服务。付款方式可用闲鱼担保、微信、支付宝或 PayPal；确认范围后再开始。</p>
+    </footer>
+  </body>
+</html>
